@@ -54,10 +54,20 @@ Key protobuf messages:
 
 Tachiyomi uses `int64` source IDs derived from hashing the extension package name. This converter uses a default ID that should work with MangaBuddy-compatible extensions.
 
-## Requirements
+## Setup
 
 ```bash
-pip install protobuf grpcio-tools
+# Create and activate virtual environment
+python -m venv venv
+
+# On Windows
+venv\Scripts\activate
+
+# On macOS/Linux
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
 ## Usage
@@ -89,7 +99,8 @@ pip install protobuf grpcio-tools
 |------|---------|
 | `convert_to_tachimanga.py` | Main conversion script |
 | `backup.proto` | Tachiyomi backup protobuf schema |
-| `backup_pb2.py` | Generated Python protobuf classes (auto-generated) |
+| `requirements.txt` | Python dependencies |
+| `backup_pb2.py` | Generated Python protobuf classes (auto-generated, not in repo) |
 
 ## Limitations
 
